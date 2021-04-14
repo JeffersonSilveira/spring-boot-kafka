@@ -1,0 +1,9 @@
+topic:
+  name: ordertopic
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      group-id: order-consumer-group
